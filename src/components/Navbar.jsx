@@ -19,6 +19,7 @@ function Navbar() {
         <a href="/#">Muebles</a>
         <a href="/#">Arte</a>
         <a href="/#">Nosotros</a>
+        <ion-icon name="cart"></ion-icon>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
