@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../stylesCss/App.css";
-import DescriptionItem from "./DescriptionItem";
+import  DescriptionItem from "./DescriptionItem";
 
-
-function Home() {
+function ItemDetail() {
   const [show, setShow] = useState(false);
+
   return (
     <div className="">
-      {show ? <DescriptionItem /> : null}
+      {show ? < DescriptionItem /> : null}
       <div className="login">
         <div className="form-container">
           <button
@@ -15,7 +15,7 @@ function Home() {
             onClick={() => setShow(!show)}
           >
             {" "}
-            Conoce más{" "}
+            Detalle{" "}
           </button>
         </div>
       </div>
@@ -23,4 +23,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default ItemDetail;

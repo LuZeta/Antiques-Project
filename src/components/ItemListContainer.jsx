@@ -1,20 +1,28 @@
-import React from "react";
-import "../stylesCss/App.css";
+import { useEffect, useState } from "react";
+import { pedirDatos } from "../helpers/pedirDatos";
+import ItemList from "./ItemList";
+import "../stylesCss/CardStyles.css";
 
-function ItemListContainer() {
-  return (
-    <div className="mensajeItem">
-      <div className="cardMensaje">
-        <h1 className="titleMensaje">Bienvenid@!!!</h1>
-        <p className="subtitleMensaje">
-          {" "}
-          Esta página está en construcción. Pronto encontrararás aqui una tienda
-          de antiguedades Muebles, cerámica, arte, libros y mucho más!!! Gracias
-          por visitarnos
-        </p>
-      </div>
-    </div>
-  );
+
+const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([])
+   
+    useEffect(() => {
+        pedirDatos()
+            .then((res) => {
+              setProductos(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, [])
+
+    return (
+        <div>
+            <ItemList productos={productos}/>
+        </div>
+    )
 }
 
 export default ItemListContainer;

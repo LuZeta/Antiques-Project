@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Mesriana",
+        "description": "Loremmesaaaaaaaaa",
+        "image":"/assets/espejo.jpg",
+        "category": "Muebles",
+        "price": 7400
+    },{
+        "id": 2,
+        "name": "Mesa",
+        "description": "Lorem",
+        "image":"/assets/vitrola.jpg",
+        "category": "Muebles",
+        "price": 7400
+    },{
+        "id": 3,
+        "name": "zapato",
+        "description": "Lorem",
+        "image":"/assets/VictorianCarousel.jpg",
+        "category": "Muebles",
+        "price": 7400
+    }
+]

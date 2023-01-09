@@ -5,16 +5,17 @@ import Navbar from "./components/Navbar";
 import RecoveryPass from "./components/RecoveryPass";
 import ChangePass from "./components/ChangePass";
 import Home from "./components/Home";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Home />
+      <ItemListContainer />
       <Login />
       <RecoveryPass />
       <ChangePass />
-    </div>
+    </>
   );
 }
 

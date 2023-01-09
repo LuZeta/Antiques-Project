@@ -15,7 +15,6 @@ const Login = () => {
           </label>
           <input
             type="password"
-            id="password"
             placeholder="*********"
             className="input input-password"
           />
