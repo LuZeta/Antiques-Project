@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { pedirDatos } from "../helpers/pedirDatos";
+import { datosListContainer } from "../helpers/datosListContainer";
 import ItemList from "./ItemList";
 import "../stylesCss/CardStyles.css";
 
@@ -9,7 +9,7 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
    
     useEffect(() => {
-        pedirDatos()
+        datosListContainer()
             .then((res) => {
               setProductos(res)
             })
@@ -19,8 +19,10 @@ const ItemListContainer = () => {
     }, [])
 
     return (
-        <div className="ItemListContainer">
+        <div className="wrapper-flex">
+        <div>
             <ItemList productos={productos}/>
+        </div>
         </div>
     )
 }

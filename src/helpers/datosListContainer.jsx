@@ -1,6 +1,6 @@
 import datos from "../data/Data.json";
 
-export const pedirDatos = () => {
+export const datosListContainer = () => {
     return new Promise((resolve, reject) => {
         setTimeout( () => {
             resolve(datos)

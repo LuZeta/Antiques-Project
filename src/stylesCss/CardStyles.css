@@ -10,6 +10,9 @@
     --lg: 18px;
 
   }
+.ItemListContainer{
+  display: flex;
+}
   
   .wrapper-flex {
     display: flex;
@@ -34,12 +37,12 @@
     clip-path: circle(238px at center);
   }
 .banner-img-opacity{
-    opacity: 95%;
+    opacity: 704%;
 }
-  .profile-img {
-    width: 11rem;
-    clip-path: circle(89px at center);
-    margin-top: -0.5rem;
+  .circle-img {
+    width: 15rem;
+    clip-path: circle(164px at center);
+    margin-top: -3.5rem;
   }
   
   .name {

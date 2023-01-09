@@ -1,21 +1,22 @@
-import React from "react";
-import "./stylesCss/App.css";
-import Login from "./components/Login";
+
 import Navbar from "./components/Navbar";
-import RecoveryPass from "./components/RecoveryPass";
-import ChangePass from "./components/ChangePass";
-import Home from "./components/Home";
+import Login from "./components/Login"
 import ItemListContainer from "./components/ItemListContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+
       <Navbar />
-      <ItemListContainer />
-      <Login />
-      <RecoveryPass />
-      <ChangePass />
-    </>
+
+      <Routes>
+       <Route path="/" element={ <ItemListContainer /> } />
+       <Route path="/Login" element={ <Login /> } />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
