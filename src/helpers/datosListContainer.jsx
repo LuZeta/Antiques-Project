@@ -4,7 +4,7 @@ export const datosListContainer = () => {
     return new Promise((resolve, reject) => {
         setTimeout( () => {
             resolve(datos)
-        }, 2000)
+        }, 500)
     })
 }
 
@@ -20,6 +20,6 @@ export const datositemDetailId = (id) => {
                     error: 'No encontramos tu búsqueda'
                 })
             }
-        }, 2000)
+        }, 500)
     })
 }

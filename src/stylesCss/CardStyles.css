@@ -10,11 +10,9 @@
     --lg: 18px;
 
   }
-.ItemListContainer{
-  display: flex;
-}
-  
+
   .wrapper-flex {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,8 +28,9 @@
     width: 280px;
     margin-bottom: 1rem;
     margin-left: 1rem;
+ 
   }
-  
+
   .banner-img {
     height: 4rem;
     clip-path: circle(238px at center);

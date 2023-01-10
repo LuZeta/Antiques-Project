@@ -19,11 +19,11 @@ const ItemListContainer = () => {
     }, [])
 
     return (
+        
         <div className="wrapper-flex">
-        <div>
             <ItemList productos={productos}/>
         </div>
-        </div>
+      
     )
 }
 
