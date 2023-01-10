@@ -1,6 +1,8 @@
 import "../stylesCss/CardStyles.css";
+import { Link } from "react-router-dom";
 
-const Item = ( {name, image, description} ) => {
+
+const Item = ( {name, image, description, id} ) => {
 
     return (
 <div className="">
@@ -12,7 +14,7 @@ const Item = ( {name, image, description} ) => {
             <img className="circle-img" src={image} alt={name}/>
             <h4 className="name">{name}</h4>
             <p className="description">{description}</p>
-            <button className="btn">Item Detail</button>
+            <Link to={`/ItemDetailContainer/${id}`} className="btn">Item Detail</Link>      
         </div>
         </div>
         </div>

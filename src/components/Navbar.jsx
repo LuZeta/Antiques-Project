@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../stylesCss/NavbarStyles.css";
 import logo from "../assets/logo.png";
 
@@ -14,11 +15,11 @@ function Navbar() {
     <header>
       <img src={logo} className="logo" alt="logo" />
       <nav ref={navRef}>
-        <a href="/">Inicio</a>
-        <a href="/Login">Cerámica</a>
-        <a href="/#">Muebles</a>
-        <a href="/#">Arte</a>
-        <a href="/#">Nosotros</a>
+        <Link to="/">Inicio</Link>
+        <Link to="/Login">Cerámica</Link>
+        <Link to="/#">Muebles</Link>
+        <Link to="/#">Arte</Link>
+        <Link to="/#">Nosotros</Link>
         <ion-icon name="cart"></ion-icon>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

@@ -7,3 +7,19 @@ export const datosListContainer = () => {
         }, 2000)
     })
 }
+
+export const datositemDetailId = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+            const item = datos.find((el) => el.id === id)
+
+            if (item) {
+                resolve(item)
+            } else {
+                reject({
+                    error: 'No encontramos tu búsqueda'
+                })
+            }
+        }, 2000)
+    })
+}
