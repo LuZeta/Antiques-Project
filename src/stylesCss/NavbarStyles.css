@@ -11,7 +11,7 @@
 	--black: #000000;
 	--grey: #78909c;
 	--text-input-field: #F7F7F7;
-	--primary: #d81b60;
+	--primary: #fbc02d;
 	--sm: 14px;
 	--md: 16px;
 	--lg: 18px;
@@ -33,7 +33,7 @@ header {
 	padding: 0 2rem;
 	background-color: var(--text-input-field);
 	color: var(--primary);
-	z-index: 1;
+	z-index: 2;
 }
 
 nav a {

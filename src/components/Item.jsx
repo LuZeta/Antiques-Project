@@ -13,11 +13,10 @@ const Item = ( {name, image, description, id} ) => {
             </div>
             <img className="circle-img" src={image} alt={name}/>
             <h4 className="name">{name}</h4>
-            <button className="btn"><Link className="btn-link-card" to={`/ItemDetailContainer/${id}`} >Item Detail</Link>   </button>
+            <button><Link className="btn-link-card" to={`/ItemDetailContainer/${id}`} >Item Detail</Link>   </button>
                
         </div>
         </div>
-       
     )
 }
 
