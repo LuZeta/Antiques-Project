@@ -1,22 +1,57 @@
 [
-    {
+   {
         "id": 1,
-        "name": "Mesriana",
-        "description": "Loremmesaaaaaaaaa",
-        "image":"/assets/espejo.jpg",
+        "name": "Victorian Carousel",
+        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
+        "image":"/assets/VictorianCarousel.jpg",
         "category": "Muebles",
         "price": 7400
     },{
         "id": 2,
-        "name": "Mesa",
-        "description": "Lorem",
-        "image":"/assets/vitrola.jpg",
+        "name": "Espejo de Pared Valenciano",
+        "description": "Marco tallado en yeso, medidas 1.5 alto por 50 cm de ancho",
+        "image":"/assets/espejo.jpg",
         "category": "Muebles",
         "price": 7400
     },{
         "id": 3,
-        "name": "zapato",
-        "description": "Lorem",
+        "name": "Vitrola Barroca",
+        "description": "Pieza única, base con incrustaciones y diseño en placas de nácar. Siglo XIX",
+        "image":"/assets/vitrola.jpg",
+        "category": "Muebles",
+        "price": 7400
+    }, {
+        "id": 4,
+        "name": "Victorian Carousel",
+        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
+        "image":"/assets/VictorianCarousel.jpg",
+        "category": "Muebles",
+        "price": 7400
+    }, {
+        "id": 5,
+        "name": "Victorian Carousel",
+        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
+        "image":"/assets/VictorianCarousel.jpg",
+        "category": "Muebles",
+        "price": 7400
+    }, {
+        "id": 6,
+        "name": "Victorian Carousel",
+        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
+        "image":"/assets/VictorianCarousel.jpg",
+        "category": "Muebles",
+        "price": 7400
+    }, {
+        "id": 7,
+        "name": "Victorian Carousel",
+        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
+        "image":"/assets/VictorianCarousel.jpg",
+        "category": "Muebles",
+        "price": 7400
+    }, {
+        "id": 8,
+        "name": "Victorian Carousel",
+        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
         "image":"/assets/VictorianCarousel.jpg",
         "category": "Muebles",
         "price": 7400

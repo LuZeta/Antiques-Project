@@ -15,12 +15,11 @@ function Navbar() {
     <header>
       <img src={logo} className="logo" alt="logo" />
       <nav ref={navRef}>
-      <button onClick={showNavbar}><Link to="/">Inicio</Link></button>
-      <button onClick={showNavbar}><Link to="/Login">Cerámica</Link></button>
-      <button><Link to="/#">Muebles</Link></button>
-      <button><Link to="/#">Arte</Link></button>
-      <button><Link to="/#">Nosotros</Link></button>
-        <ion-icon name="cart"></ion-icon>
+      <button className="btn-link" onClick={showNavbar}><Link to="/">Inicio</Link></button>
+      <button className="btn-link" ><Link to="/#">Muebles</Link></button>
+      <button className="btn-link" ><Link to="/#">Nosotros</Link></button>
+      <button className="btn-link"  onClick={showNavbar}><Link to="/Login">Ingresa</Link></button>
+       <ion-icon name="cart"></ion-icon>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

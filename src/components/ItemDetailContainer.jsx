@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
     }, [itemId])
 
     return (
-        <div>
+        <div className="wrapper-flex">
             {
                 item && <ItemDetail {...item}/>
             }
