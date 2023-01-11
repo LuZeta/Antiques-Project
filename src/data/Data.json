@@ -4,7 +4,7 @@
         "name": "Victorian Carousel",
         "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
         "image":"/assets/VictorianCarousel.jpg",
-        "category": "Muebles",
+        "category": "Varios",
         "price": 5000
     },{
         "id": 2,
@@ -54,6 +54,27 @@
         "description": "Zisha tea sets, juego completo porcelana Europea",
         "image":"/assets/ceramicaeuropea.jpg",
         "category": "Ceramica",
+        "price": 7900
+    }, {
+        "id": 9,
+        "name": "Muñeca Antigua",
+        "description": "Caja con muñeca antigua con ropa",
+        "image":"/assets/cajademuneca.jpg",
+        "category": "Varios",
+        "price": 7900
+    }, {
+        "id": 10,
+        "name": "Lámpara Porcelana",
+        "description": "Lámpara de porcelana vintage",
+        "image":"/assets/lamparaporcvintag.jpg",
+        "category": "Varios",
+        "price": 7900
+    }, {
+        "id": 11,
+        "name": "Set de Marcos",
+        "description": "Set de marcos de madera y yeso",
+        "image":"/assets/marcosantiguos.jpg",
+        "category": "Varios",
         "price": 7900
     }
 ]
