@@ -5,55 +5,55 @@
         "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
         "image":"/assets/VictorianCarousel.jpg",
         "category": "Muebles",
-        "price": 7400
+        "price": 5000
     },{
         "id": 2,
         "name": "Espejo Valenciano",
         "description": "Marco tallado en yeso, medidas 1.5 alto por 50 cm de ancho",
         "image":"/assets/espejo.jpg",
-        "category": "Muebles",
-        "price": 7400
+        "category": "Mobiliario",
+        "price": 4100
     },{
         "id": 3,
         "name": "Vitrola Barroca",
         "description": "Pieza única, base con incrustaciones y diseño en placas de nácar. Siglo XIX",
         "image":"/assets/vitrola.jpg",
-        "category": "Muebles",
+        "category": "Varios",
         "price": 7400
     }, {
         "id": 4,
-        "name": "Victorian Carousel",
-        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
-        "image":"/assets/VictorianCarousel.jpg",
-        "category": "Muebles",
-        "price": 7400
+        "name": "Cama Luis XV",
+        "description": "Parte del juego dormitorio Luis XV, restaurado y patinado recientemente",
+        "image":"/assets/CamaLuis.jpg",
+        "category": "Mobiliario",
+        "price": 8900
     }, {
         "id": 5,
-        "name": "Victorian Carousel",
-        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
-        "image":"/assets/VictorianCarousel.jpg",
-        "category": "Muebles",
-        "price": 7400
+        "name": "Ropero Luis XV",
+        "description": "Parte del juego dormitorio Luis XV, restaurado y patinado recientemente",
+        "image":"/assets/RoperoLuis.jpg",
+        "category": "Mobiliario",
+        "price": 9000
     }, {
         "id": 6,
-        "name": "Victorian Carousel",
-        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
-        "image":"/assets/VictorianCarousel.jpg",
-        "category": "Muebles",
+        "name": "Tibor Chino",
+        "description": "Antiguo jarron chino o tibor de porcelana china",
+        "image":"/assets/tiborchino.jpg",
+        "category": "Ceramica",
         "price": 7400
     }, {
         "id": 7,
-        "name": "Victorian Carousel",
-        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
-        "image":"/assets/VictorianCarousel.jpg",
-        "category": "Muebles",
+        "name": "Sillon Tallado",
+        "description": "Sillón tallado y pintado, original Luis XVI",
+        "image":"/assets/sillontallado.jpg",
+        "category": "Mobiliario",
         "price": 7400
     }, {
         "id": 8,
-        "name": "Victorian Carousel",
-        "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
-        "image":"/assets/VictorianCarousel.jpg",
-        "category": "Muebles",
-        "price": 7400
+        "name": "Juego de té porcelana",
+        "description": "Zisha tea sets, juego completo porcelana Europea",
+        "image":"/assets/ceramicaeuropea.jpg",
+        "category": "Ceramica",
+        "price": 7900
     }
 ]

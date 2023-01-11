@@ -18,10 +18,8 @@ const ItemDetail = ( {id, name, category, image, description, price} ) => {
             <p>Categoría: {category}</p>
             <p className="description">{description}</p>
             <p>Precio: ${price}</p>
-            
-            <button className="btn-secondary">Agregar al carrito</button>   
-             <button className="btn" onClick={handleVolver}>Volver</button> 
-
+            <button className="btn-add-cart">Agregar al carrito</button>   
+            <button className="btn-return" onClick={handleVolver}>Volver</button> 
       </div>
       </div> 
   );

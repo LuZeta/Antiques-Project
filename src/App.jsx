@@ -1,8 +1,7 @@
-
 import Navbar from "./components/Navbar";
-import Login from "./components/Login"
+import Login from "./components/Login";
 import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -15,6 +14,7 @@ function App() {
        <Route path="/" element={ <ItemListContainer /> } />
        <Route path="/Login" element={ <Login /> } />
        <Route path="/ItemDetailContainer/:itemId" element={ <ItemDetailContainer />} />
+       <Route path="/ItemListContainer/:categoryId" element={ <ItemListContainer />} />
        <Route path="*" element={ <Navigate to={"/"}/> }/>
       </Routes>
 

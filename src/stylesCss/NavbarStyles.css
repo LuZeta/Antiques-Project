@@ -33,9 +33,11 @@ header {
 	padding: 0 2rem;
 	background-color: var(--text-input-field);
 	color: var(--primary);
-	z-index: 2;
 }
 
+.nav {
+	z-index: 2;
+}
 nav a {
 	margin: 0 1rem;
 	color: var(--primary);

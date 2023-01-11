@@ -39,10 +39,20 @@
   .banner-img-opacity{
     opacity: 704%;
   }
+  .card {
+    height: 420px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
   .circle-img {
     width: 15rem;
     clip-path: circle(164px at center);
     margin-top: -3.5rem;
+    object-fit: contain;
+    height: 400%;
   }
 
   .name {
@@ -57,7 +67,6 @@
   
   .btn {
     width: 100%;
-    border: none;
     font-size: 1rem;
     font-weight: bold;
     color: white;
@@ -66,37 +75,62 @@
   }
 
   .btn-link-card{
-  border: none;
-  font-weight: bold;
+  background-color: var(--white);
+  font-size: 16px;
+  padding: 5px;
+  color: var(--primary);
   text-decoration: none;
-  text:var(--white);
-  background-color: #d81b60;
+  border-radius: 6%;
+  border: 0.5px solid var(--primary);
+  font-weight: bold;
+
   }
+
+  .link-card{
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  }
+  
   /*Item Detail*/
  
   .container-detail {
-    width: 450px;
+    margin-top: 170px;
+    margin-bottom: 50px;
   }
 
   .img-detail{
-    width: 440px;
+    width: 380px;
   }
 
   .name-detail{
     font-weight: bold;
     font-size: 30px;
     text-align: -webkit-center;
+    margin-bottom: 20px;
   }
   
-  .btn-secondary{
+  .btn-return{
+    margin: 5px;
     background-color: var(--white);
     border-radius: 8px;
     border: 1px solid var(--grey);
     color: var(--grey);
-    width: 100%;
+    width: 45%;
     cursor: pointer;
     font-size: var(--md);
     font-weight: bold;
     height: 50px;
   }
- 
+  .btn-add-cart{
+    margin: 5px;
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    width: 45%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+  }
