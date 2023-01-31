@@ -5,6 +5,7 @@
         "description": "Pieza artesanal, siglo XVII, impecable estado, funciona el mecanismo que la hace girar",
         "image":"/assets/VictorianCarousel.jpg",
         "category": "Varios",
+        "stock": 5,
         "price": 5000
     },{
         "id": 2,
@@ -12,6 +13,7 @@
         "description": "Marco tallado en yeso, medidas 1.5 alto por 50 cm de ancho",
         "image":"/assets/espejo.jpg",
         "category": "Mobiliario",
+        "stock": 3,
         "price": 4100
     },{
         "id": 3,
@@ -19,6 +21,7 @@
         "description": "Pieza única, base con incrustaciones y diseño en placas de nácar. Siglo XIX",
         "image":"/assets/vitrola.jpg",
         "category": "Varios",
+        "stock": 1,
         "price": 7400
     }, {
         "id": 4,
@@ -26,6 +29,7 @@
         "description": "Parte del juego dormitorio Luis XV, restaurado y patinado recientemente",
         "image":"/assets/CamaLuis.jpg",
         "category": "Mobiliario",
+        "stock": 1,
         "price": 8900
     }, {
         "id": 5,
@@ -33,6 +37,7 @@
         "description": "Parte del juego dormitorio Luis XV, restaurado y patinado recientemente",
         "image":"/assets/RoperoLuis.jpg",
         "category": "Mobiliario",
+        "stock": 1,
         "price": 9000
     }, {
         "id": 6,
@@ -40,6 +45,7 @@
         "description": "Antiguo jarron chino o tibor de porcelana china",
         "image":"/assets/tiborchino.jpg",
         "category": "Ceramica",
+        "stock": 1,
         "price": 7400
     }, {
         "id": 7,
@@ -47,6 +53,7 @@
         "description": "Sillón tallado y pintado, original Luis XVI",
         "image":"/assets/sillontallado.jpg",
         "category": "Mobiliario",
+        "stock": 1,
         "price": 7400
     }, {
         "id": 8,
@@ -54,6 +61,7 @@
         "description": "Zisha tea sets, juego completo porcelana Europea",
         "image":"/assets/ceramicaeuropea.jpg",
         "category": "Ceramica",
+        "stock": 1,
         "price": 7900
     }, {
         "id": 9,
@@ -61,6 +69,7 @@
         "description": "Caja con muñeca antigua con ropa",
         "image":"/assets/cajademuneca.jpg",
         "category": "Varios",
+        "stock": 2,
         "price": 7900
     }, {
         "id": 10,
@@ -68,6 +77,7 @@
         "description": "Lámpara de porcelana vintage",
         "image":"/assets/lamparaporcvintag.jpg",
         "category": "Varios",
+        "stock": 7,
         "price": 7900
     }, {
         "id": 11,
@@ -75,6 +85,7 @@
         "description": "Set de marcos de madera y yeso",
         "image":"/assets/marcosantiguos.jpg",
         "category": "Varios",
+        "stock": 24,
         "price": 7900
     }
 ]
