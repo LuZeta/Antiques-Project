@@ -167,6 +167,22 @@ body {
   text-decoration: none;
 }
 
+.cartContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  flex-flow: column;
+  border-color: var(--primary);
+}
+.cartCards {
+  box-shadow: 0px 2px 8px 0px var(--grey);
+  background-color:var(--white);
+  text-align: center;
+  border-radius: 1rem;
+  width: 700px;
+ }
+
 @media (max-width: 640px) {
   .form-container {
     display: grid;

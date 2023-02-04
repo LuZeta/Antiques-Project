@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { FaTrash } from "react-icons/fa";
-import "../stylesCss/CardStyles.css";
+import { Link, useNavigate } from "react-router-dom"
+import "../stylesCss/App.css";
+import { doc, getDoc } from "firebase/firestore";
 
 
 
@@ -10,25 +12,30 @@ const Cart = () => {
     const { cart, emptyCart, totalCart, removeItem } = useContext(CartContext);
 
     return (
-        <div>
-        <h2>Tus Antiques</h2>
-        <div>
+        <div className="cartContainer">
+           
+        <h1>Tus Antiques</h1>
+        <div className="cartCards">
         {
             cart.map(item => (
                 <div key={item.id}>
-                <h2 className="name-detail">{item.name}</h2>
+                <h4 className="name-detail">{item.name}</h4>
                 <p className="description">Cantidad: {item.cantidad}</p>
                 <p>Precio: ${item.price}</p>
                 <p>Precio total: ${item.price * item.cantidad}</p>
-                <button className="btn-add-cart" onClick={()=> removeItem(item.id)}><FaTrash/></button>
+                <div className="pequeñoBotonBote">
+                <button className="primary-button login-b" onClick={()=> removeItem(item.id)}><FaTrash/></button>
+                </div>
                 </div>
             ))
         }
-                <h2 className="name-detail">Total de la compra: ${totalCart ()}</h2>
+        <h4 className="name-detail">Total de la compra: ${totalCart ()}</h4>
 
         </div>
-        <button className="btn-add-cart">Finalizar Compra</button>   
-        <button className="btn-return"  onClick={ emptyCart } >Vaciar Carrito</button> 
+        <div className="form-container">
+        <Link className="primary-button login-b" to="/checkout">Terminar Compra</Link>
+        <button className="secondary-button login-b"  onClick={ emptyCart } >Vaciar Carrito</button> 
+        </div>
         </div>
     )
 }
