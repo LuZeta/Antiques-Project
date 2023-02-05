@@ -4,6 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import "../stylesCss/App.css";
 import { db } from "../firebase/firebase";
 import { collection, writeBatch, documentId, getDocs, query, where, addDoc  } from "firebase/firestore";
+import logo from "../assets/logo.png";
 
 
 const Checkout = () => {
@@ -14,6 +15,7 @@ const Checkout = () => {
     const [values, setValues] = useState({
         nombre: '',
         direccion: '',
+        localidad: '',
         email: ''
     })
 
@@ -82,17 +84,23 @@ const Checkout = () => {
         } else {
             alert("Hay items sin stock")
         }
-
     }
 
     if (orderId) {
         return (
-            <div className="container my-5">
-                <h2>Tu compra ha sido exitosa</h2>
+            <div className="login">
+                <div className="form-container">
+                <h2>Gracias por confiar en nosotros</h2>
+                <img src={logo} className="logo" alt="logo" />
                 <hr/>
                 <p>Tu código de orden es: {orderId}</p>
 
-                <Link to="/">Volver</Link>
+                <Link to="/" className="secondary-button login-b">Volver</Link>
+             <p className="resend">
+                <span>Solicitar comprobante y número de orden a mi e-mail </span>
+                <Link to="/" className="">Enviar</Link>
+             </p>
+             </div>
             </div>
         )
     }
@@ -104,6 +112,7 @@ const Checkout = () => {
 
     <div className="login">
       <div className="form-container">
+
 
         <form onSubmit={handleSubmit} className="form">
           <label htmlFor="name" className="label">

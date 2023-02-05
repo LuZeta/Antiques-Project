@@ -101,6 +101,7 @@ body {
   grid-template-rows: auto 1fr auto;
   width: 300px;
   justify-items: center;
+  text-align: center;
 }
 
 .form {
