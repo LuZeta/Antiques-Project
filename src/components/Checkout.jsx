@@ -3,130 +3,144 @@ import { useCartContext } from "../context/CartContext";
 import { Link, Navigate } from "react-router-dom";
 import "../stylesCss/App.css";
 import { db } from "../firebase/firebase";
-import { collection, writeBatch, documentId, getDocs, query, where, addDoc  } from "firebase/firestore";
+import {
+  collection,
+  writeBatch,
+  documentId,
+  getDocs,
+  query,
+  where,
+  addDoc,
+} from "firebase/firestore";
 import logo from "../assets/logo.png";
 
-
 const Checkout = () => {
-    const { cart, totalCart, emptycart } = useCartContext()
+  const { cart, totalCart, emptycart } = useCartContext();
 
-    const [orderId, setOrderId] = useState(null)
+  const [orderId, setOrderId] = useState(null);
 
-    const [values, setValues] = useState({
-        nombre: '',
-        direccion: '',
-        localidad: '',
-        email: ''
-    })
+  const [values, setValues] = useState({
+    nombre: "",
+    direccion: "",
+    localidad: "",
+    email: "",
+  });
 
-    const handleInputChange = (e) => {
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        })
+  const handleInputChange = (e) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // validación
+    if (values.nombre.length < 2) {
+      alert("Nombre inválido");
+      return;
+    }
+    if (values.direccion.length < 2) {
+      alert("Dirección inválida");
+      return;
+    }
+    if (values.email.length < 5) {
+      alert("Email inválido");
+      return;
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
+    const orden = {
+      cliente: values,
+      items: cart,
+      total: totalCart(),
+    };
 
-        // validacion
-        if (values.nombre.length < 2) {
-            alert("Nombre inválido")
-            return
-        }
-        if (values.direccion.length < 2) {
-            alert("Dirección inválida")
-            return
-        }
-        if (values.email.length < 5) {
-            alert("Email inválido")
-            return
-        }
+    const batch = writeBatch(db);
+    const ordersRef = collection(db, "orders");
+    const productosRef = collection(db, "Productos");
 
-        const orden = {
-            cliente: values,
-            items: cart,
-            total: totalCart()
-        }
+    const outOfStock = [];
 
-        const batch = writeBatch(db)
-        const ordersRef = collection(db, 'orders')
-        const productosRef = collection(db, 'Productos')
+    const itemsRef = query(
+      productosRef,
+      where(
+        documentId(),
+        "in",
+        cart.map((prod) => prod.id)
+      )
+    );
 
-        const outOfStock = []
+    const productos = await getDocs(itemsRef);
 
-        const itemsRef = query( productosRef, where( documentId(), 'in', cart.map(prod => prod.id) ) )
+    productos.docs.forEach((doc) => {
+      const item = cart.find((item) => item.id === doc.id);
 
-        const productos = await getDocs(itemsRef)
+      if (doc.data().stock >= item.cantidad) {
+        batch.update(doc.ref, {
+          stock: doc.data().stock - item.cantidad,
+        });
+      } else {
+        outOfStock.push(item);
+      }
+    });
 
-        productos.docs.forEach(doc => {
-                const item = cart.find(item => item.id === doc.id)
-
-                if (doc.data().stock >= item.cantidad) {
-                    batch.update(doc.ref, {
-                        stock: doc.data().stock - item.cantidad
-                    })
-                } else {
-                    outOfStock.push(item)
-                }
-        })
-
-        if (outOfStock.length === 0) {
-            batch.commit()
-                .then(() => {
-                    addDoc(ordersRef, orden)
-                        .then((doc) => {
-                            setOrderId(doc.id)
-                            emptycart()
-                        })
-                        .catch((error) => console.log(error) )
-                })
-        } else {
-            alert("Hay items sin stock")
-        }
+    if (outOfStock.length === 0) {
+      batch.commit().then(() => {
+        addDoc(ordersRef, orden)
+          .then((doc) => {
+            setOrderId(doc.id);
+            emptycart();
+          })
+          .catch((error) => console.log(error));
+      });
+    } else {
+      alert("Hay items sin stock");
     }
+  };
 
-    if (orderId) {
-        return (
-            <div className="login">
-                <div className="form-container">
-                <h2>Gracias por confiar en nosotros</h2>
-                <img src={logo} className="logo" alt="logo" />
-                <hr/>
-                <p>Tu código de orden es: {orderId}</p>
-
-                <Link to="/" className="secondary-button login-b">Volver</Link>
-             <p className="resend">
-                <span>Solicitar comprobante y número de orden a mi e-mail </span>
-                <Link to="/" className="">Enviar</Link>
-             </p>
-             </div>
-            </div>
-        )
-    }
-
-    if (cart.length === 0) {
-        return <Navigate to="/"/>
-    }
+  if (orderId) {
     return (
+      <div className="login">
+        <div className="form-container">
+          <h2>Gracias por confiar en nosotros</h2>
+          <img src={logo} className="logo" alt="logo" />
+          <hr />
+          <p>Tu código de orden es: {orderId}</p>
 
+          <Link to="/" className="secondary-button login-b">
+            Volver
+          </Link>
+          <p className="resend">
+            <span>Solicitar comprobante y número de orden a mi e-mail </span>
+            <Link to="/" className="">
+              Enviar
+            </Link>
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (cart.length === 0) {
+    return <Navigate to="/" />;
+  }
+  return (
     <div className="login">
       <div className="form-container">
-
-
         <form onSubmit={handleSubmit} className="form">
           <label htmlFor="name" className="label">
             Nombre
           </label>
           <input
             type="text"
-            name= "nombre"
+            name="nombre"
             onChange={handleInputChange}
             value={values.nombre}
             placeholder=""
             className="input input-name"
           />
-          
+
           <label htmlFor="direccion" className="label">
             Direccion
           </label>
@@ -138,7 +152,7 @@ const Checkout = () => {
             placeholder=""
             className="input input-direccion"
           />
-          
+
           <label htmlFor="localidad" className="label">
             Localidad
           </label>
@@ -150,25 +164,25 @@ const Checkout = () => {
             placeholder=""
             className="input input-direccion"
           />
-          
+
           <label htmlFor="email" className="label">
             Email
           </label>
           <input
-             type="text"
-             name= "email"
-             onChange={handleInputChange}
-             value={values.email}
-             placeholder=""
-             className="input input-email"
+            type="text"
+            name="email"
+            onChange={handleInputChange}
+            value={values.email}
+            placeholder=""
+            className="input input-email"
           />
 
-        
           <p className="submit">
             <span>Confirma tu Orden</span>
-         </p>
-          <button type="submit" className="secondary-button login-b">Enviar</button>
-
+          </p>
+          <button type="submit" className="secondary-button login-b">
+            Enviar
+          </button>
         </form>
       </div>
     </div>

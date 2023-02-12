@@ -1,5 +1,5 @@
 import React from "react";
-import '../stylesCss/App.css';
+import "../stylesCss/App.css";
 import sendmail from "../assets/sendmail.png";
 
 const RecoveryPassword = () => {

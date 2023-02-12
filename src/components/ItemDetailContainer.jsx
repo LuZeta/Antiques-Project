@@ -5,30 +5,18 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 
 const ItemDetailContainer = () => {
+  const [item, setItem] = useState(null);
+  const { itemId } = useParams();
 
-    const [item, setItem] = useState(null)
-    const { itemId } = useParams()
+  useEffect(() => {
+    const docRef = doc(db, "Productos", itemId);
 
-    useEffect(() => {
-   
-        const docRef = doc(db, "Productos", itemId)
-    
-        getDoc(docRef)
-            .then(doc => {
-                setItem( {...doc.data(), id: doc.id} )
-            })
+    getDoc(docRef).then((doc) => {
+      setItem({ ...doc.data(), id: doc.id });
+    });
+  }, [itemId]);
 
-    }, [itemId])
-
-
-    return (
-        <div className="wrapper-flex">
-            {
-                item && <ItemDetail {...item}/>
-            }
-
-        </div>
-    )
-}
+  return <div className="wrapper-flex">{item && <ItemDetail {...item} />}</div>;
+};
 
 export default ItemDetailContainer;

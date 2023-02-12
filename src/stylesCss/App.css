@@ -168,7 +168,7 @@ body {
   text-decoration: none;
 }
 
-.cartContainer{
+.cartContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,11 +178,11 @@ body {
 }
 .cartCards {
   box-shadow: 0px 2px 8px 0px var(--grey);
-  background-color:var(--white);
+  background-color: var(--white);
   text-align: center;
   border-radius: 1rem;
   width: 700px;
- }
+}
 
 @media (max-width: 640px) {
   .form-container {

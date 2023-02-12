@@ -8,28 +8,28 @@ import { CartProvider } from "./context/CartContext";
 import Checkout from "./components/Checkout";
 
 function App() {
-
-    return (
+  return (
     <CartProvider>
-         
       <BrowserRouter>
-
-      <Navbar />
-      <Routes>
-        <Route path="/" element={ <ItemListContainer /> } />
-        <Route path="/Login" element={ <Login /> } />
-        <Route path="/ItemDetailContainer/:itemId" element={ <ItemDetailContainer />} />
-        <Route path="/ItemListContainer/:categoryId" element={ <ItemListContainer />} />
-        <Route path="*" element={ <Navigate to={"/"}/> }/>
-        <Route path="/cart" element={ <Cart/> }/>
-        <Route path="/checkout" element={ <Checkout/> }/>
-      </Routes>
-
-       </BrowserRouter>
-
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/Login" element={<Login />} />
+          <Route
+            path="/ItemDetailContainer/:itemId"
+            element={<ItemDetailContainer />}
+          />
+          <Route
+            path="/ItemListContainer/:categoryId"
+            element={<ItemListContainer />}
+          />
+          <Route path="*" element={<Navigate to={"/"} />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </BrowserRouter>
     </CartProvider>
-
-);
+  );
 }
 
 export default App;

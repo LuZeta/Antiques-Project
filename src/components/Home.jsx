@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../stylesCss/App.css";
 import DescriptionItem from "./DescriptionItem";
 
-
 function Home() {
   const [show, setShow] = useState(false);
   return (

@@ -1,14 +1,12 @@
 import React from "react";
-import '../stylesCss/App.css';
+import "../stylesCss/App.css";
 
 const Login = () => {
   return (
     <div className="login">
       <div className="form-container">
         <h1 className="title">Cambiar contraseña</h1>
-        <p className="subtitle">
-         Ingresa una nueva contraseña para tu cuenta
-        </p>
+        <p className="subtitle">Ingresa una nueva contraseña para tu cuenta</p>
         <form action="/" className="form">
           <label for="password" className="label">
             Contraseña
